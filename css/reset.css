@@ -1,0 +1,81 @@
+/* Estilos Generales */
+html, body, div, header, nav, main, section, article, aside, footer, p, blockquote, video, audio, iframe, embed, form, details, h1, h2, h3, h4, dl, ul, ol, li, dd, dt, hr, figure, figcaption, img, picture, thead, tbody, tfoot, legend, table, tr, td, th, fieldset, select, s,u, a, strong, input, mark, small, del, ins, sub, sup, q, abbr, address, cite, source, dfn, label, time, dialog, hgroup, span, summary, b, i, em, pre, acronym, button, center {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.60);
+    line-height: 20px;
+    text-decoration-color: rgba(0, 0, 0, 0.60);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 35px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 37px;
+}
+
+h3 {
+    font-size: 29px;
+    line-height: 34px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+s, u, a, strong, mark, small, del, ins, sub, sup, q, abbr, address, cite, dfn, label, time, span, b, i, em, pre, acronym {
+    display: inline;
+}
+
+input, button {
+    display: inline-block;
+}
+
+dd {
+    margin-left: 40px;
+}
+
+a {
+    color: #0074d9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+i, cite, em, dfn {
+    font-style: italic;
+}
+
+address, abbr, dfn, figcaption {
+    font-weight: 200;
+}
+
+abbr[title], acronym[title] {
+    text-decoration: dotted underline;
+}

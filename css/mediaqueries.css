@@ -1,0 +1,129 @@
+@media (min-width: 913px) {
+	.img-subHead {
+		border:none;
+	}
+}
+@media (max-width:912px) {
+	.contenedor {
+		display: block;
+	}
+
+	.main {
+		border:none;
+	}
+
+	.aside {
+		border-top:solid 1px lightgray;
+	}
+
+
+	.aside__estadisticas {
+		width: calc(100% / 4);
+		display: -webkit-flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		-o-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: space-evenly;
+		-moz-justify-content: space-evenly;
+		-ms-justify-content: space-evenly;
+		-o-justify-content: space-evenly;
+		justify-content: space-evenly;
+	}
+}
+@media (max-width: 744px) {
+	.hide {
+		display: none; 
+	}
+}
+@media (max-width:690px) {
+	.btn-menu {
+		display: block;
+	}
+
+	.header {
+		position: static;
+		border-bottom: solid 5px #0074D9;
+	}
+
+	.header__menu {
+		position: absolute;
+		display: block;
+		width: 100%;
+		max-width: 250px;
+		height: 100%;
+		top: 70px;
+		left: -250px;
+		background-color:#0074D9;
+		z-index: 1000;
+		-webkit-transition: left 500ms ease;
+		-moz-transition: left 500ms ease;
+		-ms-transition: left 500ms ease;
+		-o-transition: left 500ms ease;
+		transition: left 500ms ease;
+	}
+
+	.header__menu > :nth-child(n) {
+		color:white;
+	}
+	.img-subHead {
+		border: none;
+	}
+}
+@media (max-width: 570px) {
+	.categorias, .buscador {
+		display: block;
+		margin: 10px auto;
+		float: none;
+	}
+
+	.main__tutoriales {
+		border-top: solid 1px lightgray;
+		padding: 10px;
+	}
+}
+@media (max-width: 480px) {
+	.inputComent {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.btn-coment {
+		margin: inherit;
+	}
+}
+@media (max-width: 580px) {
+	body::before {
+		display: none;
+	}
+}
+@media (max-width: 332px) {
+	.hide2 {
+		display: none;
+	}
+
+	.img-subHead p {
+		font-size: 30px;
+	}
+}
+@media (max-width: 266px) {
+	.buscador {
+		width: 100%;
+	}
+}
+@media (max-width: 241px) {
+	.title {
+		display: none;
+	}
+
+	.header__titulo:after {
+		content: 'FC'
+	}
+}

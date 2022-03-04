@@ -1,0 +1,553 @@
+/* Estilos Generales */
+:root {
+	--height70:70px;
+	--animacion180ms:180ms ease;
+	--hoverGrisLigero:rgba(0, 0, 0, 0.070);
+	--borde1pxLightgray: solid 1px lightgray;
+	--bar: 0;
+}
+
+body::before {
+	content: '';
+	width: calc(var(--bar) * 1vw);
+	position: fixed;
+	top: 0;
+	z-index: 1001;
+	height: 5px;
+	background-color: #0074d9;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	background-color: #eee;
+}
+
+.contenedor {
+	max-width:1600px;
+	margin: auto;
+	-ms-grid-template-columns:4fr 1.2fr;
+	grid-template-columns:4fr 1.2fr;
+	-ms-grid-template-rows:100px auto auto auto;
+	grid-template-rows:100px auto auto auto;
+	-ms-grid-template-areas: 'header header' 'img img' 'main aside' 'footer footer';
+	grid-template-areas: 'header header' 'img img' 'main aside' 'footer footer';
+}
+
+button {
+	border:none;
+	padding: 10px 20px;
+	font-size:20px;
+	cursor: pointer;
+	background-color: white;
+}
+
+/* Estilos Grupales */
+.dib {
+	width:40%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.header__enlaces, .card__enlaces, .header__titulo {
+	color:inherit;
+}
+
+.header, .main, .aside {
+	background-color: #fff;
+}
+
+.main, .aside, .footer, .aside > div, .Redes-Enlaces, .tutos, .header__enlaces, .main__card, .btn-menu, 
+.submenu > li > a, .categorias > li, .div-comentarios > .comentarios > div {
+	padding:10px;
+}
+
+.tutos, .header__enlaces, .card__enlaces img, .Redes-Enlaces > span {
+	display: block;
+}
+
+.header__wrap, .header__menu, .header__logo, .header__titulo, .header__menu, .aside, .Redes-Enlaces,
+.footer, .categorias > li {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+	-o-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.header__titulo, .header__enlaces, .card__enlaces, .main__card, .btn-coment, .buscador {
+	-webkit-transition:var(--animacion180ms);
+	-o-transition:var(--animacion180ms);
+	transition:var(--animacion180ms);
+}
+
+.header, .header__wrap, .btn-menu img, .main__card, .aside > div, .contenedor, .footer, .copy, .datos, .submenu {
+	width:100%;
+}
+
+.header, .header__wrap {
+	height:var(--height70);
+}
+
+.header__enlaces:hover, .btn-menu:hover, .main__card:hover, .tutos:hover, .Redes-Enlaces:hover {
+	background-color: var(--hoverGrisLigero);
+}
+
+.header__logo, .header__titulo {
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+}
+
+.header__wrap, .header__logo {
+	-ms-align-items: stretch;
+	align-items: stretch;
+}
+
+.header__titulo, .header__menu {
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.contenedor, .main__tutoriales {
+	display:grid;
+	display:-ms-grid;
+}
+
+.aside > div, .footer > :nth-child(n) {
+	margin:20px 0px;
+}
+
+.submenu, .categorias, .lista {
+	list-style:none;
+}
+/* ===================================== */
+	/* ========= Header ========== */
+/* ===================================== */
+.header {
+	max-width: 1600px;
+	-webkit-box-shadow:0px 0px 6px black;
+	box-shadow:0px 0px 6px black;
+	-ms-grid-area: header;
+	grid-area: header;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+
+/* Header__wrap */
+.header__wrap {
+	max-width: 1200px;
+	margin: auto;
+}
+
+/* Header__logo */
+.header__logo {
+	max-width: 191px;
+}
+
+.header__titulo {
+	padding:0px 5px;
+	font-size:30px;
+}
+
+.header__titulo img {
+	width:50px;
+	margin-right: 10px;
+}
+
+.header__titulo:hover {
+	background-color: #000;
+	color:white;
+}
+
+/* Header__menu */
+.header__menu {
+	width: 60%;
+	padding: 0px 3px;
+}
+
+.header__menu {
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-moz-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	-o-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+
+.header__enlaces {
+	text-align:center;
+	-webkit-flex-grow: 1;
+	-moz-flex-grow: 1;
+	-ms-flex-grow: 1;
+	-o-flex-grow: 1;
+	flex-grow: 1;
+}
+
+/* Btn Menu */
+.btn-menu {
+	display: none;
+	width:50px;
+	height: 50px;
+	border:none;
+	background-color:inherit;
+	cursor:pointer;
+	-ms-align-self: center;
+	align-self: center;
+}
+
+/* ===================================== */
+	/* ========= Main ========== */
+/* ===================================== */
+.main {
+	border-right: var(--borde1pxLightgray);
+	-ms-grid-area: main;
+	grid-area: main;
+}
+
+.intro {
+	text-align: center;
+}
+
+.buscador {
+	font-size: 20px;
+	border: 1px solid lightgray;
+	border-radius:5px;
+	padding:5px 10px;
+	float:right;
+	margin-right: 40px;
+}
+
+.buscador:focus {
+	border-color: #0074D9;
+}
+
+.categorias {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+	width:100%;
+	max-width: 200px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 40px;
+	position: relative;
+	color:white;
+	cursor: pointer;
+}
+
+.categorias > li {
+	background: #0074d9;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top:45px;
+	left:0;
+	background: white;
+	border: 1px solid gray;
+}
+
+.submenu a {
+	display: block;
+}
+
+.submenu a:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.flechaDown {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.main__tutoriales {
+	-ms-grid-template-columns: repeat(auto-fill, minmax(200px,264.8px));
+	grid-template-columns: repeat(auto-fill, minmax(200px,264.8px));
+	-webkit-justify-content: space-evenly;
+	-moz-justify-content: space-evenly;
+	-ms-justify-content: space-evenly;
+	-o-justify-content: space-evenly;
+	justify-content: space-evenly;
+	-webkit-grid-gap: 30px;
+	-moz-grid-gap: 30px;
+	-ms-grid-gap: 30px;
+	-o-grid-gap: 30px;
+	grid-gap: 30px;
+}
+
+.main__card {
+	background: #f3f3f3;
+	text-align: center;
+	outline: solid 1px lightgray;
+	margin: 20px 0;
+	-webkit-transition: 200ms ease all;
+	-o-transition: 200ms ease all;
+	transition: 200ms ease all; 
+}
+
+.main__card:hover {
+	background-color: #eee;
+}
+
+.card__enlaces:hover {
+	color:#0074d9;
+}
+
+.card__enlaces img {
+	width:40%;
+	margin:0px auto 10px auto;
+}
+
+/* ===================================== */
+	/* ========= Aside ========== */
+/* ===================================== */
+.aside {
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	-o-justify-content: flex-start;
+	justify-content: flex-start;
+	-ms-grid-area: aside;
+	grid-area: aside;
+}
+
+.aside > div {
+	margin:20px 0px; 
+}
+
+.Redes-Enlaces {
+	font-size:20px;
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	-o-justify-content: flex-start;
+	justify-content: flex-start;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.Redes-Enlaces > span {
+	margin-left: 10px;
+}
+
+.Redes-Enlaces > img {
+	width: 30px;
+}
+
+/* ===================================== */
+	/* ========= footer ========== */
+/* ===================================== */
+.footer {
+	margin-top: 30px;
+	color:white;
+	border-top: var(--borde1pxLightgray);
+	background-color:#343a40;
+	-webkit-justify-content: space-around;
+	-moz-justify-content: space-around;
+	-ms-justify-content: space-around;
+	-o-justify-content: space-around;
+	justify-content: space-around;
+	-ms-grid-area: footer;
+	grid-area: footer;
+}
+
+.footer > :nth-child(n) {
+	text-align: center;
+}
+
+/* ===================================== */
+	/* ========= Comentario ========== */
+/* ===================================== */
+.inputComent {
+	font-size: 20px;
+	width:60%;
+	height:25px;
+	padding:0px 5px;
+	resize:none;
+	border:none;
+	border-bottom: 1px solid #0074D9;
+	background: transparent;
+}
+
+.btn-coment {
+	padding:5px 10px;
+	margin-left: 20px;
+	background-color: #0074d9;
+	color: white;
+	border-radius: 2px;
+}
+
+.btn-coment:hover {
+	opacity: 0.9;
+}
+
+.div-comentarios {
+	width: 100%;
+}
+
+.div-comentarios > .comentarios {
+	width: auto;
+	margin:10px 0px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.div-comentarios > .comentarios > img {
+	width: 50px;
+	height: 50px;
+}
+
+.div-comentarios > .comentarios > div {
+	border:var(--borde1pxLightgray);
+}
+
+/* ===================================== */
+	/* ========= Img SubHead ========== */
+/* ===================================== */
+.img-subHead {
+	width: 100%;
+	height: 200px !important;
+	-ms-grid-area: img;
+	grid-area: img;
+	position: relative;
+	display: block;
+	border-top: 70px solid transparent;
+}
+
+.img-subHead img {
+	width: 100%;
+	height: 200px !important;
+}
+
+.img-subHead p {
+	position: absolute;
+	top:25%;
+	color:white;
+	font-size: 25px;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+/* ===================================== */
+	/* ========= Modal ========== */
+/* ===================================== */
+.divForm {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transition: 300ms all;
+	-o-transition: 300ms all;
+	transition: 300ms all;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.divForm form {
+	max-width: 400px;
+	width: 100%;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 6px 0px black;
+	box-shadow: 0px 0px 6px 0px black;
+}
+
+.divInput > input {
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	border: solid 1px lightgray;
+	border-radius: 5px;
+	padding: 5px 5px;
+	margin:5px 0px;
+}
+
+.divForm h2 {
+	margin-bottom: 20px;
+}
+
+.IniSec {
+	border:none;
+	width: 100%;
+	display: block;
+	padding: 10px 20px;
+	color: white;
+	font-size: 20px;
+	border-radius: 5px;
+	background-color: #0074D9;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.divForm button img {
+	width: 18px;
+}
+
+.divForm button {
+	float: right;
+	display: block;
+}
+
+.btn-r {
+	color: #0074D9;
+}
+
+.divForm.active {
+	opacity: 1;
+	z-index: 20000;
+}
